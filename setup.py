@@ -4,6 +4,7 @@ import pandas as pd
 # dataset you wish to run the models on.
 
 # --- BEGIN FOREST FIRES SETUP ---
+# # Default values are needed for the simple single-variable models
 # defaults = {
 #     'cause_H': 1,
 #     'cause_PB': 0,
@@ -37,6 +38,7 @@ import pandas as pd
 #     'after2000': 0, 'after2010': 0, 'after2020': 0
 # }
 
+# # The range in number-of-features-per-model we want to evaluate
 # iterations_num_feats = [
 #                         # 1,
 #                         # 2,
@@ -50,6 +52,7 @@ import pandas as pd
 #                         10
 #                         ]
 
+# # Selects the feature to split populations on as well as the values of that feature defining the source and target populations:
 # source_target_zones = [
 #     # ('ECOZONE', 8, 7),
 #     # ('ECOZONE', 8, 14),
@@ -104,7 +107,7 @@ import pandas as pd
 ### --- END FOREST FIRES SETUP ---
 
 ### --- BEGIN BANK_CHURN SETUP ---
-
+# # Default values are needed for the simple single-variable models
 # defaults = {
 #     'Complain' : 0.0 ,
 #     'NumOfProducts' : 1.0 ,
@@ -130,6 +133,7 @@ import pandas as pd
 #     'ExcellentCr' : 0.0 ,
 # }
 
+# # The range in number-of-features-per-model we want to evaluate
 # iterations_num_feats = [
 #                         1,
 #                         2,
@@ -143,6 +147,7 @@ import pandas as pd
 #                         10
 #                         ]
 
+# # Selects the feature to split populations on as well as the values of that feature defining the source and target populations:
 # # (split_col, source, target)
 # source_target_zones = [
 #     ('Gender', 1.0, 0.0),
@@ -346,16 +351,6 @@ source_target_zones = [
     ('AnyHealthcare', 0, 1),
     # ('HighBP', 0, 1),
     # ('HighBP', 1, 0),
-    # ('Soil_Type12', 0, 1),
-    # ('Soil_Type16', 0, 1),
-    # ('Wilderness_Area3', 0, 1),
-    # ('Wilderness_Area1', 0, 1),
-    # ('Aspect_binned', 0, 3),
-    # ('Aspect_binned', 1, 2),
-    # ('Horizontal_Distance_To_Roadways_binned', 0, 3),
-    # ('Horizontal_Distance_To_Roadways_binned', 1, 2),
-    # ('Wilderness_Area4', 0, 1),
-    # ('Wilderness_Area4', 1, 0)
 ]
 
 simple_output_filename = "Results/simple_results_diabetes.csv"
