@@ -1,5 +1,5 @@
 # OD Transportability Code
-Note: My apologies for the lack of version control history in this repo. The actual code was developed in a (much messier) private repo including my notes along the way which I have not made public. I can show the original repo on request for authorship verification.
+Note: My apologies for the lack of version history in this repo. The actual code was developed in a (much messier) private repo including my notes along the way and tons of extraneous files created during the development process which I have not made public. I can show the original repo on request for authorship verification purposes.
 
 ## Credits
 The basic inspiration for this code (and this paper at large) comes from Melika Farahani (UBC MS 2022) and her original Master's Thesis work on transportability. This project expanded the research significantly, and as a result, the code in this repo was completely re-written from scratch by me, Ziven Anderson. However, some methods and underlying design decisions were inspired by Melika's original code: https://github.com/melikaf/TranspotableModels
@@ -19,8 +19,8 @@ Datasets to be run through the models are stored as csv files in the Datasets di
 ### `setup.py`
 This file contains all the globally necessary variables and definitions to run the models on a given dataset. This includes things like the filepath where the dataset can be found, default values of the features in the dataset, and parameters controlling the iterations that will be run. See details on all options in the code comments. All datasets have definitions in the `setup.py` file. Uncomment a given dataset's setup code (and comment out the rest of the file) to work with that dataset.
 
-### Jupyter Utilities
-`dataset_bin.ipynb` and `dataset_properties.ipynb` contain some basic code I used to process datasets (notably, bin continuous values into categorical quartiles) as well as to get information such as the infogain of the individual features of a dataset (which is used in the paper).
+### `dataset_bin.ipynb` & `dataset_properties.ipynb`
+These notebooks contain some basic code I used to process datasets (notably, bin continuous values into categorical quartiles) as well as to get information such as the infogain of the individual features of a dataset (which is used in the paper).
 
 ### `simple_models_single_split.py`
 Running this file generates the csv data necessary to make figure X.1 from the paper (for any dataset). It only runs on the first source-target zone given, and it provides the loss on a feature-by-feature basis from training single-feature models on each of them and comparing CP and OD outputs. It uses laplace smoothing on top of a basic count-based MLE estimate.
