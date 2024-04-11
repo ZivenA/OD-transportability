@@ -14,7 +14,7 @@ All code in this repo is either in Python files or Python Jupyter notebooks. I r
 ## Files and their Purpose
 
 ### Datasets and Results
-Datasets to be run through the models are stored as csv files in the Datasets directory. The respective csv results from running models on the datasets are stored in the Results directory (git-ignored to avoid repo clutter)
+Datasets to be run through the models are stored as csv files in the Datasets directory. The dataset citations in the paper refer to the actual sources where the original datasets were retrieved from, while the datasets in this directory are the exact processed versions that I actually ran to generate the paper results. The respective csv results from running models on the datasets are stored in the Results directory (git-ignored to avoid repo clutter).
 
 ### `setup.py`
 This file contains all the globally necessary variables and definitions to run the models on a given dataset. This includes things like the filepath where the dataset can be found, default values of the features in the dataset, and parameters controlling the iterations that will be run. See details on all options in the code comments. All datasets have definitions in the `setup.py` file. Uncomment a given dataset's setup code (and comment out the rest of the file) to work with that dataset.
